@@ -9,7 +9,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        itemListView
+        itemListView.apply {
+            adapter = ProductAdepter(
+                this@MainActivity,
+                listOf(ProductModel("Fish"), ProductModel("Fish2"))
+            ) {
+                // TODO
+            }
+        }
     }
 }
 
